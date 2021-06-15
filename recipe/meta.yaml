@@ -1,5 +1,5 @@
 {% set name = "hiproc" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7a25cbf8d054fe1caa6d69c5339ed4248ac733f34f69b83fe7c96f6bd3366e7c
+  sha256: 9172812093e69dec111ee860e50c184fec4f43c4ba594be15ed44f41531b3f53
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
     - EDR_Stats = hiproc.EDR_Stats:main
@@ -60,7 +60,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'A library to help process HiRISE EDRs with ISIS.'
+  summary: A library to help process HiRISE EDRs with ISIS.
   description: |
     The hiproc library contains a set of command-line programs that
     orchestrate ISIS programs to process data from the HiRISE camera
