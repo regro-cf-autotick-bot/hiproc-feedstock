@@ -43,6 +43,7 @@ requirements:
     - numpy >=1.18.1
     - scipy >=1.4.1
     - matplotlib-base >=3.2.1
+    - multidict
     - gdal >=3.0.1
     - pvl >=1.0.1
     - kalasiris >=1.8.0
