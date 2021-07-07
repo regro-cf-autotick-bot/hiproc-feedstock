@@ -1,5 +1,5 @@
 {% set name = "hiproc" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 847fe0eb219626d079c1f698533d0fa350df84eda1fdd684b47f2adac4a406b4
+  sha256: b27fdddbefc2067c677a0ea5cfa4c896ea235b31bcff76abac6fd3cbf44f30ae
 
 build:
   number: 0
