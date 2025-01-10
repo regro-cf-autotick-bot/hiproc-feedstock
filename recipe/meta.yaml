@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7999fc78e6dc019536a8c9455288465d2b3956c4b42f55e78487307782dfa8d5
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -36,10 +36,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy >=1.18.1
     - scipy >=1.4.1
     - matplotlib-base >=3.2.1
@@ -53,6 +53,7 @@ test:
     - hiproc
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
